@@ -6,32 +6,32 @@ It starts from an inclined plane in which there is an object sliding down
 The effect of gravity also intervenes in the springs.
 The formulas for the different forces are:
 
-*Weight strength:*
-magnitude: mass * gravity
-x: 0
-y: -1
+### *Weight strength:*
+- magnitude: mass * gravity
+- x: 0
+- y: -1
 
-*Normal strength:*
-magnitude: mass * gravity * cos(alpha)
-x: sine(angle)
-y: cosine(angle)
+### *Normal strength:*
+- magnitude: mass * gravity * cos(alpha)
+- x: sine(angle)
+- y: cosine(angle)
 
-*Friction force of the plane:*
-magnitude: Mu * Normal force
-x: -v,x
-y: -v.y (in the opposite direction to the speed)
+### *Friction force of the plane:*
+- magnitude: Mu * Normal force
+- x: -v,x
+- y: -v.y (in the opposite direction to the speed)
 
-*Air friction force:*
-magnitude: Kd * velocity^2
-x: -v.x
-y: -v.y (in the opposite direction to the speed)
+### *Air friction force:*
+- magnitude: Kd * velocity^2
+- x: -v.x
+- y: -v.y (in the opposite direction to the speed)
 
-*Spring strength:*
-magnitude: Kei * elongation
-x: rest position - current position
-y: rest position - current position
+### *Spring strength:*
+- magnitude: Kei * elongation
+- x: rest position - current position
+- y: rest position - current position
 
-*Integrators*
+### *Integrators*
 
 1. Euler Explicit:
     - y_{n+1} = y_n + h * f(t_n, y_n)
@@ -73,32 +73,32 @@ Se parte de un plano inclinado en el cual hay un objeto deslizándose hacia abaj
 efecto de la gravedad intervienen también dos muelles.
 Las fórmulas de las diferentes fuerzas son:
 
-*Fuerza peso:*
-magnitud: masa * gravedad
-x: 0
-y: -1
+### *Fuerza peso:*
+- magnitud: masa * gravedad
+- x: 0
+- y: -1
 
-*Fuerza normal:*
-magnitud: masa * gravedad * cos(alpha)
-x: seno(angulo)
-y: coseno(angulo)
+### *Fuerza normal:*
+- magnitud: masa * gravedad * cos(alpha)
+- x: seno(angulo)
+- y: coseno(angulo)
 
-*Fuerza fricción del plano:*
-magnitud: Mu * Fuerza normal
-x: -v,x
-y: -v.y (en dirección contraria a la velocidad)
+### *Fuerza fricción del plano:*
+- magnitud: Mu * Fuerza normal
+- x: -v,x
+- y: -v.y (en dirección contraria a la velocidad)
 
-*Fuerza fricción del aire:*
-magnitud: Kd * velocidad^2
-x: -v.x
-y: -v.y (en dirección contraria a la velocidad)
+### *Fuerza fricción del aire:*
+- magnitud: Kd * velocidad^2
+- x: -v.x
+- y: -v.y (en dirección contraria a la velocidad)
 
-*Fuerza muelles:*
-magnitud: Kei * elongación
-x: posición de reposo - posición actual
-y: posición de reposo - posición actual
+### *Fuerza muelles:*
+- magnitud: Kei * elongación
+- x: posición de reposo - posición actual
+- y: posición de reposo - posición actual
 
-*Integradores*
+### *Integradores*
 
 1. Euler Explícito:
     - y_{n+1} = y_n + h * f(t_n, y_n)
