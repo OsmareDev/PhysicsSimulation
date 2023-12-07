@@ -34,31 +34,31 @@ y: rest position - current position
 *Integrators*
 
 1. Euler Explicit:
-    y_{n+1} = y_n + h * f(t_n, y_n)
+    - y_{n+1} = y_n + h * f(t_n, y_n)
 
 
 2. Simplectic Euler:
-    v_{n+1/2} = v_n + (h/2) * a_n
-    x_{n+1} = x_n + h * v_{n+1/2}
+    - v_{n+1/2} = v_n + (h/2) * a_n
+    - x_{n+1} = x_n + h * v_{n+1/2}
 
 
 3. Heun:
-    k_1 = h * f(t_n, y_n)
-    k_2 = h * f(t_n + h, y_n + k_1)
-    y_{n+1} = y_n + (1/2) * (k_1 + k_2)
+    - k_1 = h * f(t_n, y_n)
+    - k_2 = h * f(t_n + h, y_n + k_1)
+    - y_{n+1} = y_n + (1/2) * (k_1 + k_2)
 
 4. Second Order Runge-Kutta (RK2):
-    k_1 = h * f(t_n, y_n)
-    k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    y_{n+1} = y_n + k_2
+    - k_1 = h * f(t_n, y_n)
+    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
+    - y_{n+1} = y_n + k_2
 
 
 5. Fourth Order Runge-Kutta (RK4):
-    k_1 = h * f(t_n, y_n)
-    k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    k_3 = h * f(t_n + (h/2), y_n + (k_2/2))
-    k_4 = h * f(t_n + h, y_n + k_3)
-    y_{n+1} = y_n + (1/6) * (k_1 + 2k_2 + 2k_3 + k_4)
+    - k_1 = h * f(t_n, y_n)
+    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
+    - k_3 = h * f(t_n + (h/2), y_n + (k_2/2))
+    - k_4 = h * f(t_n + h, y_n + k_3)
+    - y_{n+1} = y_n + (1/6) * (k_1 + 2k_2 + 2k_3 + k_4)
 
 
 Where:
@@ -101,31 +101,31 @@ y: posición de reposo - posición actual
 *Integradores*
 
 1. Euler Explícito:
-    y_{n+1} = y_n + h * f(t_n, y_n)
+    - y_{n+1} = y_n + h * f(t_n, y_n)
 
 
 2. Euler Simplectico:
-    v_{n+1/2} = v_n + (h/2) * a_n
-    x_{n+1} = x_n + h * v_{n+1/2}
+    - v_{n+1/2} = v_n + (h/2) * a_n
+    - x_{n+1} = x_n + h * v_{n+1/2}
 
 
 3. Heun:
-    k_1 = h * f(t_n, y_n)
-    k_2 = h * f(t_n + h, y_n + k_1)
-    y_{n+1} = y_n + (1/2) * (k_1 + k_2)
+    - k_1 = h * f(t_n, y_n)
+    - k_2 = h * f(t_n + h, y_n + k_1)
+    - y_{n+1} = y_n + (1/2) * (k_1 + k_2)
 
 4. Runge-Kutta de Segundo Orden (RK2):
-    k_1 = h * f(t_n, y_n)
-    k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    y_{n+1} = y_n + k_2
+    - k_1 = h * f(t_n, y_n)
+    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
+    - y_{n+1} = y_n + k_2
 
 
 5. Runge-Kutta de Cuarto Orden (RK4):
-    k_1 = h * f(t_n, y_n)
-    k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    k_3 = h * f(t_n + (h/2), y_n + (k_2/2))
-    k_4 = h * f(t_n + h, y_n + k_3)
-    y_{n+1} = y_n + (1/6) * (k_1 + 2k_2 + 2k_3 + k_4)
+    - k_1 = h * f(t_n, y_n)
+    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
+    - k_3 = h * f(t_n + (h/2), y_n + (k_2/2))
+    - k_4 = h * f(t_n + h, y_n + k_3)
+    - y_{n+1} = y_n + (1/6) * (k_1 + 2k_2 + 2k_3 + k_4)
 
 
 Donde:
