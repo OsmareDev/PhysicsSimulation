@@ -1,23 +1,36 @@
-# AirFriction
-![a2](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/d02ef0ef-1d24-4c6b-bdfb-c17864184c05)
+# Gravity and Spring
+![a1](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/eb882757-7c99-4ea5-a610-e15053be302b)
 
 # English
 
-The simulation will consist of calculating the trajectory followed by a particle that is
-It launches with an initial velocity and is affected by the force of weight and friction.
-with air or water
-
+It starts from an inclined plane in which there is an object sliding down
+The effect of gravity also intervenes in the springs.
 The formulas for the different forces are:
 
 ### *Weight strength:*
 - magnitude: mass * gravity
 - x: 0
-- and: -1
+- y: -1
+
+### *Normal strength:*
+- magnitude: mass * gravity * cos(alpha)
+- x: sine(angle)
+- y: cosine(angle)
+
+### *Friction force of the plane:*
+- magnitude: Mu * Normal force
+- x: -v,x
+- y: -v.y (in the opposite direction to the speed)
 
 ### *Air friction force:*
-- magnitude: Kd * velocity (it is not squared since it is requested to be linear)
+- magnitude: Kd * velocity^2
 - x: -v.x
 - y: -v.y (in the opposite direction to the speed)
+
+### *Spring strength:*
+- magnitude: Kei * elongation
+- x: rest position - current position
+- y: rest position - current position
 
 ### *Integrators*
 
@@ -57,10 +70,8 @@ Where:
 
 # Español
 
-La simulación consistirá en calcular la trayectoria que sigue una partícula que se
-lanza con una velocidad inicial y es afectada por la fuerza del peso y del rozamiento
-con el aire o con el agua
-
+Se parte de un plano inclinado en el cual hay un objeto deslizándose hacia abajo por
+efecto de la gravedad intervienen también dos muelles.
 Las fórmulas de las diferentes fuerzas son:
 
 ### *Fuerza peso:*
@@ -68,10 +79,25 @@ Las fórmulas de las diferentes fuerzas son:
 - x: 0
 - y: -1
 
+### *Fuerza normal:*
+- magnitud: masa * gravedad * cos(alpha)
+- x: seno(angulo)
+- y: coseno(angulo)
+
+### *Fuerza fricción del plano:*
+- magnitud: Mu * Fuerza normal
+- x: -v,x
+- y: -v.y (en dirección contraria a la velocidad)
+
 ### *Fuerza fricción del aire:*
-- magnitud: Kd * velocidad (no es al cuadrado dado que se pide que sea lineal)
+- magnitud: Kd * velocidad^2
 - x: -v.x
 - y: -v.y (en dirección contraria a la velocidad)
+
+### *Fuerza muelles:*
+- magnitud: Kei * elongación
+- x: posición de reposo - posición actual
+- y: posición de reposo - posición actual
 
 ### *Integradores*
 
