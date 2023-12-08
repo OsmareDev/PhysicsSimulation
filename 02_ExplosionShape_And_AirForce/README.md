@@ -1,5 +1,5 @@
 # Explosion Shape And Air Force
-
+![a3](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/e435ba62-2cfb-462b-8448-3c5ec0bfe3c3)
 
 # English
 
@@ -35,7 +35,7 @@ explosion we calculate a departure angle for all of them. After which we calcula
 the module of the speed that they must follow according to their angle to carry out the
 formulas following the following equation:
 
-![image]()
+![c1](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/cc8bba5c-8ca9-4a74-afdd-f80329476ea2)
 
 **where:**
 - k: rounding factor of the tips [0..1] (0 is a circle)
@@ -80,7 +80,7 @@ explosion calculamos un ángulo de salida para todas ellas. Tras lo cual calcula
 el módulo de la velocidad que deben seguir según su angulo para realizar las
 formulas siguiendo la siguiente ecuación:
 
-![image]()
+![c1](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/cc8bba5c-8ca9-4a74-afdd-f80329476ea2)
 
 **donde:**
 - k : factor de redondeo de las puntas [0..1] (0 es un circulo)
