@@ -1,110 +1,91 @@
 # Explosion Shape And Air Force
-![a2](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/d02ef0ef-1d24-4c6b-bdfb-c17864184c05)
+
 
 # English
 
-The simulation will consist of calculating the trajectory followed by a particle that is
-It launches with an initial velocity and is affected by the force of weight and friction.
-with air or water
+The aim is to implement a particle model that simulates the rise and explosion
+of a rocket that is affected by the wind, altering the flight and movement of the rocket
+explosion shape
 
-The formulas for the different forces are:
+## Wind model implementation
 
-### *Weight strength:*
-- magnitude: mass * gravity
-- x: 0
-- and: -1
+- **Description:**
+The force of the wind affects the particle in a particular way in which it affects
+The more opposite are the speeds of the particle and the wind.
 
-### *Air friction force:*
-- magnitude: Kd * velocity (it is not squared since it is requested to be linear)
-- x: -v.x
-- y: -v.y (in the opposite direction to the speed)
+- **Implementation:**
+Our implementation looks at the angle between the speed of the particle and
+the wind speed with a processing function called angleBetween that gives
+the result is always positive, a value between 0 and Pi, that is, if they go towards the same
+direction or if they are in the opposite direction to each other. We use this divided value
+by PI and we use it to determine how much the wind contributes to our sum of
+forces.
 
-### *Integrators*
+## Types of designed palm trees
 
-1. Euler Explicit:
-    - y_{n+1} = y_n + h * f(t_n, y_n)
+- **Description:**
+When the particle that acts as the base of the rocket explodes, particles with shapes are formed.
+which is achieved by calculating the velocities of each of the particles that
+they form the explosion
 
+- **Implementation:**
+Our implementation has been carried out through the use of a formula that calculates
+forms through an equation, depending on the number of particles per
+explosion we calculate a departure angle for all of them. After which we calculate
+the module of the speed that they must follow according to their angle to carry out the
+formulas following the following equation:
 
-2. Simplectic Euler:
-    - v_{n+1/2} = v_n + (h/2) * a_n
-    - x_{n+1} = x_n + h * v_{n+1/2}
+![image]()
 
+**where:**
+- k: rounding factor of the tips [0..1] (0 is a circle)
+- m : exit of the tips [1-4] (1 is a straight shape)
+- n : number of points [5..infinity]
 
-3. Heun:
-    - k_1 = h * f(t_n, y_n)
-    - k_2 = h * f(t_n + h, y_n + k_1)
-    - y_{n+1} = y_n + (1/2) * (k_1 + k_2)
+After this we only have to give random values to the different elements to
+form the formulas.
 
-4. Second Order Runge-Kutta (RK2):
-    - k_1 = h * f(t_n, y_n)
-    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    - y_{n+1} = y_n + k_2
-
-
-5. Fourth Order Runge-Kutta (RK4):
-    - k_1 = h * f(t_n, y_n)
-    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    - k_3 = h * f(t_n + (h/2), y_n + (k_2/2))
-    - k_4 = h * f(t_n + h, y_n + k_3)
-    - y_{n+1} = y_n + (1/6) * (k_1 + 2k_2 + 2k_3 + k_4)
-
-
-Where:
-- tn​ is the time in the current step.
-- ynyn​ is the approximate value of the solution in the current step.
-- hh is the step size.
-- f(t,y)f(t,y) is the function that defines the differential equation.
 
 # Español
 
-La simulación consistirá en calcular la trayectoria que sigue una partícula que se
-lanza con una velocidad inicial y es afectada por la fuerza del peso y del rozamiento
-con el aire o con el agua
+Se busca implementar un modelo de partículas que simule el ascenso y explosion
+de un cohete que se ve afectado por el viento alterando el vuelo y movimiento de la
+forma de la explosion
 
-Las fórmulas de las diferentes fuerzas son:
+## Implementacion del modelo de viento
 
-### *Fuerza peso:*
-- magnitud: masa * gravedad
-- x: 0
-- y: -1
+- **Descripción:**
+La fuerza del viento afecta a la partícula de una forma particular en la que afecta
+más contra más contrapuestas están las velocidades de la partícula y del viento
 
-### *Fuerza fricción del aire:*
-- magnitud: Kd * velocidad (no es al cuadrado dado que se pide que sea lineal)
-- x: -v.x
-- y: -v.y (en dirección contraria a la velocidad)
+- **Implementación:**
+Nuestra implementación mira el ángulo que hay entre la velocidad de la partícula y
+la velocidad del viento con una función de processing llamada angleBetween que da
+el resultado siempre en positivo, un valor entre 0 y Pi o sea si van hacia la misma
+dirección o si están en sentido contrario una a la otra. Usamos este valor dividido
+por PI y lo usamos para determinar cuánto contribuye el viento a nuestra suma de
+fuerzas.
 
-### *Integradores*
+## Tipos de palmeras diseñadas
 
-1. Euler Explícito:
-    - y_{n+1} = y_n + h * f(t_n, y_n)
+- **Descripción:**
+Al explotar la partícula que hace de base del cohete se forman partículas con formas
+que se consigue calculando las velocidades de cada una de las partículas que
+forman la explosion
 
+- **Implementación:**
+Nuestra implementación se ha realizado a través del uso de una fórmula que calcula
+formas a través de una ecuación, dependiendo de la cantidad de partículas por
+explosion calculamos un ángulo de salida para todas ellas. Tras lo cual calculamos
+el módulo de la velocidad que deben seguir según su angulo para realizar las
+formulas siguiendo la siguiente ecuación:
 
-2. Euler Simplectico:
-    - v_{n+1/2} = v_n + (h/2) * a_n
-    - x_{n+1} = x_n + h * v_{n+1/2}
+![image]()
 
+**donde:**
+- k : factor de redondeo de las puntas [0..1] (0 es un circulo)
+- m : salida de las puntas [1-4] (1 es una forma recta)
+- n : número de puntas [5..infinito]
 
-3. Heun:
-    - k_1 = h * f(t_n, y_n)
-    - k_2 = h * f(t_n + h, y_n + k_1)
-    - y_{n+1} = y_n + (1/2) * (k_1 + k_2)
-
-4. Runge-Kutta de Segundo Orden (RK2):
-    - k_1 = h * f(t_n, y_n)
-    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    - y_{n+1} = y_n + k_2
-
-
-5. Runge-Kutta de Cuarto Orden (RK4):
-    - k_1 = h * f(t_n, y_n)
-    - k_2 = h * f(t_n + (h/2), y_n + (k_1/2))
-    - k_3 = h * f(t_n + (h/2), y_n + (k_2/2))
-    - k_4 = h * f(t_n + h, y_n + k_3)
-    - y_{n+1} = y_n + (1/6) * (k_1 + 2k_2 + 2k_3 + k_4)
-
-
-Donde:
-- tn​ es el tiempo en el paso actual.
-- ynyn​ es el valor aproximado de la solución en el paso actual.
-- hh es el tamaño del paso.
-- f(t,y)f(t,y) es la función que define la ecuación diferencial.
+Tras esto solo nos queda dar valores aleatorios a los diferentes elementos para
+formar las fórmulas.

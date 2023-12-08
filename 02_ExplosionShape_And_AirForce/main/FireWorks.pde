@@ -9,7 +9,7 @@ public class FireWorks
   
   void addRocket(RocketType type, PVector pos, PVector vel, color c)
   {
-    // Código para añadir un cohete a la simulación
+    // Code to add a rocket to the simulation
     _rockets.add(new Rocket(type, pos, vel, c));
   }
   

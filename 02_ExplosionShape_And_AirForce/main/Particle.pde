@@ -42,11 +42,11 @@ public class Particle
       
     updateForce();
    
-    // Codigo con la implementación de las ecuaciones diferenciales para actualizar el movimiento de la partícula
+    // Code with the implementation of differential equations to update the movement of the particle
     PVector a = _F.copy();
     a.div(_m);
     
-    // la gravedad no esta afectando
+    // gravity is not affecting
     _v.add(PVector.mult(a, SIM_STEP));
     _s.add(PVector.mult(_v, SIM_STEP));
 
@@ -55,7 +55,7 @@ public class Particle
   
   void updateForce()
   {
-    // Código para calcular la fuerza que actua sobre la partícula
+    // Code to calculate the force acting on the particle
     _F = PVector.mult(G, _m);
     
     PVector x = _windVelocity.copy();
@@ -79,7 +79,7 @@ public class Particle
   void display() 
   {
     
-    // Codigo para dibujar la partícula. Se debe dibujar de forma diferente según si es la carcasa o una partícula normal
+    // Code to draw the particle. It must be drawn differently depending on whether it is the shell or a normal particle
     if (_type == ParticleType.values()[0])
     {
       fill(_color);

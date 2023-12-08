@@ -79,7 +79,7 @@ void printInfo()
 
 void drawWind()
 {
-  // Código para dibujar el vector que representa el viento
+  // Code to draw the vector that represents the wind
   stroke(255);
   PVector dir = _windVelocity.copy();
   dir.normalize();
@@ -124,9 +124,6 @@ void mousePressed()
 
 void printFile(){
   // VARS:
-  //tiempo _elapsedTime
-  //numero de particulas
-  //deltaTimeDraw
   _output.println(_elapsedTime + "," +_deltaTimeDraw + "," + _numParticles);
 }
 

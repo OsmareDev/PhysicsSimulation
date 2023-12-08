@@ -30,7 +30,7 @@ public class Rocket
   
   void createCasing()
   {
-    // Codigo para crear la carcasa
+    // Code to create the casing
     _casing = new Particle(ParticleType.values()[0], _launchPoint, _launchVel, 10, 40, _color);
   }
   
@@ -43,7 +43,7 @@ public class Rocket
   
   void explosion() 
   {
-    // Codigo para utilizar el vector de partículas, creando particulas en él con diferentes velocidades para recrear distintos tipos de palmeras
+    // Code to use the particle vector, creating particles in it with different speeds to recreate different types of palm trees
     PVector vel = new PVector();
     float k = random(0,1);
     int m = (int)random(1,4);
@@ -66,10 +66,10 @@ public class Rocket
 
   void run() 
   {
-    // Codigo con la lógica de funcionamiento del cohete. En principio no hay que modificarlo.
-    // Si la carcasa no ha explotado, se simula su ascenso.
-    // Si la carcasa ha explotado, se genera su explosión y se simulan después las partículas creadas.
-    // Cuando una partícula agota su tiempo de vida, es eliminada.
+    // Code with the rocket's operating logic. In principle there is no need to modify it.
+    // If the shell has not exploded, its rise is simulated.
+    // If the casing has exploded, its explosion is generated and the particles created are then simulated.
+    // When a particle runs out of life, it is eliminated.
     
     if (!_casing.isDead())
       _casing.run();
