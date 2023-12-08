@@ -1,4 +1,5 @@
 # AirFriction
+![a2](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/d02ef0ef-1d24-4c6b-bdfb-c17864184c05)
 
 # English
 
