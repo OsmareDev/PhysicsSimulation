@@ -1,7 +1,3 @@
-// Authors:  //<>// //<>//
-// Oscar Marin Egea
-// Francisco Sevillano Asensi
-
 // Problem description:
 // The simulation will consist of calculating the trajectory followed by a particle that is launched
 // with an initial velocity and is affected by the force of weight and friction with the air or the water
