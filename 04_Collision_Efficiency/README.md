@@ -1,5 +1,7 @@
 # Collision Efficiency
-
+![a5_1](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/3d1a3b25-79a5-4689-b34c-9f0ef40faa00)
+![a5_2](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/3683def9-b845-4143-ba5a-98f82eb66545)
+![a5_3](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/772a0b7b-8686-434f-bae5-dd801ab970e6)
 
 # English
 
@@ -20,7 +22,7 @@ Both are based on the same concept of saving particles and searching for neighbo
 to carry out the collisions, in our case we have done it with 4 neighbors and 30
 horizontal and vertical divisions.
 
-![]()
+![c2](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/5a67e4cc-4190-4dec-b50c-83786db0576c)
 
 As we can see in the graphs the improvement in performance when applying
 structures is notable, the differences between the two are not very noticeable and
@@ -47,7 +49,7 @@ Ambas se basan en el mismo concepto de guardar partículas y buscar las vecinas
 para realizar las colisiones, en nuestro caso lo hemos realizado con 4 vecinas y 30
 divisiones horizontales y verticales.
 
-![]()
+![c2](https://github.com/OsmareDev/PhysicsSimulation/assets/50903643/9fbe1bb3-2b34-4bec-a21f-fb03855c3662)
 
 Como podemos observar en las gráficas la mejora en cuanto rendimiento al aplicar
 estructuras es notable, las diferencias entre ambas no son muy apreciables y
